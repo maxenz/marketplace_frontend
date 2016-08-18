@@ -13,8 +13,8 @@ angular
       layoutHorizontalLargeIcons: false,
       layoutBoxed: false,
       showSmallSearchBar: false,
-      topNavThemeClass: 'navbar-midnightblue',
-      sidebarThemeClass: 'sidebar-default',
+      topNavThemeClass: 'navbar-success',
+      sidebarThemeClass: 'sidebar-orange',
       showChatBox: false,
       pageTransitionStyle: 'fadeIn',
       dropdownTransitionStyle: 'flipInX'

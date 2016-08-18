@@ -7,12 +7,13 @@
   .module('app.services.auth_service', [])
   .factory('authService', authService);
 
-  authService.$inject = ['$http','$q','localStorageService'];
+  authService.$inject = ['$http','$q','localStorageService', '$location'];
 
   function authService(
     $http,
     $q,
-    localStorageService
+    localStorageService,
+    $location
   ){
 
     'use strict';
@@ -74,6 +75,8 @@
       {
         _authentication.isAuth = true;
         _authentication.userName = authData.userName;
+      } else {
+        $location.path('/login');
       }
 
     }

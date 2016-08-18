@@ -17,6 +17,12 @@
 
     'use strict';
 
+    $theme.set('fullscreen', true);
+
+    $scope.$on('$destroy', function() {
+      $theme.set('fullscreen', false);
+    });
+
     var vm = this;
     vm.login = login;
     vm.message = "";
@@ -36,12 +42,6 @@
         vm.message = err.error_description;
       });
     };
-
-    $theme.set('fullscreen', true);
-
-    $scope.$on('$destroy', function() {
-      $theme.set('fullscreen', false);
-    });
 
   };
 

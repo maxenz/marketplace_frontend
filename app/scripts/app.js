@@ -1,10 +1,6 @@
-angular
-.module('shaman.marketPlaceApp', [
-  'theme',
-  'theme.demos',
-  'app'
-])
-.config(
+var app = angular.module('shaman.marketPlaceApp',['theme','theme.demos','app']);
+
+app.config(
   [
     '$provide',
     '$routeProvider',
@@ -42,6 +38,9 @@ angular
       });
     }]);
 
-    // .run(['authService'], function (authService) {
-    //   authService.fillAuthData();
-    // });
+    app.run(['authService', '$rootScope', function (authService, $rootScope) {
+      $rootScope.$on('$locationChangeStart', function (event, next, current) {
+        authService.fillAuthData();
+      });
+
+    }]);

@@ -3,7 +3,7 @@
   <div class="panel panel-primary">
     <div class="panel-body">
       <h2 class="text-center" style="margin-bottom: 25px;">Registrarse</h2>
-      <form action="#" role="form" class="form-horizontal" style="margin-bottom: 0px !important;">
+      <form role="form" class="form-horizontal" style="margin-bottom: 0px !important;">
         <div class="form-group">
           <div class="col-sm-12">
             <div class="input-group">
@@ -40,7 +40,7 @@
     </div>
     <div class="panel-footer">
       <div class="pull-right">
-        <button ng-click="signupCtrl.signUp()" class="btn btn-success">Registrarse</button>
+        <button type="submit" ng-click="signupCtrl.signUp()" class="btn btn-success">Registrarse</button>
       </div>
     </div>
     <div data-ng-hide="signupCtrl.message == ''" data-ng-class="(signupCtrl.savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
