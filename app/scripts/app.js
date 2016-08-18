@@ -1,11 +1,24 @@
 angular
-  .module('themesApp', [
-    'theme',
-    'theme.demos',
-  ])
-  .config(['$provide', '$routeProvider', function($provide, $routeProvider) {
-    'use strict';
-    $routeProvider
+.module('shaman.marketPlaceApp', [
+  'theme',
+  'theme.demos',
+  'app'
+])
+.config(
+  [
+    '$provide',
+    '$routeProvider',
+    '$httpProvider',
+    function(
+      $provide,
+      $routeProvider,
+      $httpProvider
+    ) {
+      'use strict';
+
+      $httpProvider.interceptors.push('authInterceptorService');
+
+      $routeProvider
       .when('/', {
         templateUrl: 'views/index.html',
         resolve: {
@@ -27,4 +40,8 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  }]);
+    }]);
+
+    // .run(['authService'], function (authService) {
+    //   authService.fillAuthData();
+    // });

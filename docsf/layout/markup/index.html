@@ -4,11 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Markup - Maverick Docs</title>
-  
 
-  
+  <title>Markup - Maverick Docs</title>
+
+
+
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -24,124 +24,124 @@
     body {font-size: 90%;}
     pre, code {font-size: 100%;}
     h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
-  </style> 
+  </style>
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
 
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="../../index.html" class="icon icon-home"> Maverick Docs</a>
-        
+
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
       <ul class="current">
-    
-        
+
+
             <li class="toctree-l1 ">
                 <a class="" href="../../installation/index.html">Installation</a>
             </li>
-        
 
-    
-        
+
+
+
         <span>Layout</span>
-            
+
                 <li class="toctree-l1 current">
                     <a class="current" href="index.html">Markup</a>
-                    
+
                         <ul>
-                        
+
                             <li class="toctree-l2"><a href="#grids">Grids</a></li>
-                            
+
                                 <li><a class="toctree-l3" href="#general-markup">General Markup</a></li>
-                            
+
                                 <li><a class="toctree-l3" href="#partial-views">Partial Views</a></li>
-                            
+
                                 <li><a class="toctree-l3" href="#body-classes">body classes</a></li>
-                            
+
                                 <li><a class="toctree-l3" href="#boxed-layouts">Boxed Layouts</a></li>
-                            
+
                                 <li><a class="toctree-l3" href="#fullscreen-mode">Fullscreen Mode</a></li>
-                            
+
                                 <li><a class="toctree-l3" href="#horizontal-layout">Horizontal Layout</a></li>
-                            
+
                                 <li><a class="toctree-l3" href="#navigation">Navigation</a></li>
-                            
-                        
+
+
                         </ul>
-                    
+
                 </li>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../styles/index.html">Styles</a>
-                    
+
                 </li>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../fonts/index.html">Fonts</a>
-                    
-                </li>
-            
-        
 
-    
-        
+                </li>
+
+
+
+
+
         <span>JavaScript</span>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../../js/services/index.html">Services</a>
-                    
+
                 </li>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../../js/controllers/index.html">Controllers</a>
-                    
+
                 </li>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../../js/modules/index.html">Modules</a>
-                    
+
                 </li>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../../js/directives/index.html">Directives</a>
-                    
-                </li>
-            
-        
 
-    
-        
+                </li>
+
+
+
+
+
         <span>Other</span>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../../email/index.html">Email Templates</a>
-                    
+
                 </li>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../../faq/index.html">Frequently Asked Questions</a>
-                    
+
                 </li>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../../changelog/index.html">Changelog</a>
-                    
+
                 </li>
-            
+
                 <li class="toctree-l1 ">
                     <a class="" href="../../contact/index.html">Contact</a>
-                    
-                </li>
-            
-        
 
-    
+                </li>
+
+
+
+
 </ul>
 
       </div>
@@ -150,13 +150,13 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
         <a href="../../index.html"></a>
       </nav>
 
-      
+
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
@@ -164,7 +164,7 @@
     <li><a href="../../index.html">Docs</a> &raquo;</li>
     <li>Markup</li>
       <li class="wy-breadcrumbs-aside">
-        
+
       </li>
   </ul>
   <hr/>
@@ -216,7 +216,7 @@
 <h2 id="body-classes"><em>body</em> classes</h2>
 <p>Several important classes are added to the <code>body</code> element to control overall page appearance. They are added conditionally by the controller (<a href="../../js/controllers/index.html#root-maincontroller">MainController</a>) using the <code>$theme</code> service (more on this <a href="../../js/services/index.html#theme">here</a>).</p>
 <pre><code>&lt;body
-  ng-app=&quot;themesApp&quot;
+  ng-app=&quot;shaman.marketPlaceApp&quot;
   ng-controller=&quot;MainController&quot;
   class=&quot;{{getLayoutOption('sidebarThemeClass')}} {{getLayoutOption('topNavThemeClass')}}&quot;
   ng-class=&quot;{
@@ -254,7 +254,7 @@
                     active: item.selected,
                       open: (item.children!==undefined) &amp;&amp; item.open,
            'nav-separator': item.separator==true,
-            'search-focus': (searchQuery.length&gt;0 &amp;&amp; item.selected) }&quot; 
+            'search-focus': (searchQuery.length&gt;0 &amp;&amp; item.selected) }&quot;
         ng-show=&quot;!(searchQuery.length &amp;&amp; !item.selected)&quot;
       ng-include=&quot;'templates/nav_renderer.html'&quot;
     &gt;&lt;/li&gt;
@@ -266,16 +266,16 @@
             </div>
           </div>
           <footer>
-  
+
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+
         <a href="../styles/index.html" class="btn btn-neutral float-right" title="Styles"/>Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
+
+
         <a href="../../installation/index.html" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+
     </div>
-  
+
 
   <hr/>
 
@@ -287,7 +287,7 @@
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+
         </div>
       </div>
 
@@ -297,7 +297,7 @@
 
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
-        
+
       <span><a href="../../installation/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
       <span style="margin-left: 15px"><a href="../styles/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>

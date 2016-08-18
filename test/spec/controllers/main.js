@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('themesApp'));
+  beforeEach(module('shaman.marketPlaceApp'));
 
   var MainCtrl,
     scope;

@@ -1,7 +1,8 @@
 angular
-  .module('themesApp', [
+  .module('shaman.marketPlaceApp', [
     'theme',
     'theme.demos',
+    'app'
   ])
   .config(['$provide', '$routeProvider', function($provide, $routeProvider) {
     'use strict';
