@@ -3,13 +3,13 @@ angular
   .controller('NavigationController', ['$scope', '$location', '$timeout', function($scope, $location, $timeout) {
     'use strict';
     $scope.menu = [{
-      label: 'Overview',
+      label: 'General',
       iconClasses: '',
       separator: true
     }, {
-      label: 'Dashboard',
-      iconClasses: 'glyphicon glyphicon-home',
-      url: '#/'
+      label: 'Tickets',
+      iconClasses: 'fa fa-ticket',
+      url: '#/tickets'
     }, {
       label: 'Layouts',
       iconClasses: 'glyphicon glyphicon-th-list',

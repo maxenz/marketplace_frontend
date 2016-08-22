@@ -17,7 +17,8 @@
 				</div>
 
 				<button type="submit" class="btn btn-primary btn-block" ng-click="loginCtrl.login()" data-pulsate="{reach:10, pause: 2000}">Ingresar</button>
-				<div data-ng-hide="loginCtrl.message == ''" class="alert alert-danger">
+
+				<div data-ng-hide="loginCtrl.message == ''" class="alert alert-danger" style="margin-top:20px">
 					{{loginCtrl.message}}
 				</div>
 			</form>

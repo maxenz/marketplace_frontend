@@ -200,19 +200,14 @@ $scope.$on('themeEvent:changed:layoutBoxed', function(event, newVal) {
 
 // --> Cosas del marketplace especificas
 
-vm.logout = logout;
+$scope.logout = logout;
+$scope.authentication = authService.authentication;
+$scope.isLoggedIn = $scope.authentication.isAuth;
 
 function logout(){
   authService.logOut();
   $location.path('/home');
 }
-
-vm.authentication = authService.authentication;
-vm.isLoggedIn = true;
-
-vm.login = function() {
-  vm.isLoggedIn = true;
-};
 
 $scope.rightbarAccordionsShowOne = false;
 $scope.rightbarAccordions = [{

@@ -35,7 +35,7 @@
 
       authService.login(vm.loginData).then(function (response) {
 
-        $location.path('/');
+        $location.path('/tickets');
 
       },
       function (err) {
